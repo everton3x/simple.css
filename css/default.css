@@ -166,29 +166,76 @@ hr {
 .form .fields {
     padding: var(--padding);
 }
-.form field {
+.form .field {
     margin: var(--margin);
+    display: block;
 }
 
-.form .field .label {
+.form .field>label {
     display: block;
     font-size: var(--size-normal);
 }
 
-.form .field .label:after {
+.form .field>label:after {
     content: ":";
 }
 
-.form .field .text,
-.form .field .password,
-.form .field .number {
+.form .field>input[type=text],
+.form .field>input[type=color],
+.form .field>input[type=datetime-local],
+.form .field>input[type=file],
+.form .field>input[type=week],
+.form .field>input[type=password],
+.form .field>input[type=date],
+.form .field>input[type=month],
+.form .field>input[type=email],
+.form .field>input[type=search],
+.form .field>input[type=time],
+.form .field>input[type=url],
+.form .field>input[type=tel] {
     border: var(--border);
 }
 
-.form .field .text:focus,
-.form .field .password:focus,
-.form .field .number:focus {
+.form .field>input[type=text]:focus,
+.form .field>input[type=color]:focus,
+.form .field>input[type=datetime-local]:focus,
+.form .field>input[type=file]:focus,
+.form .field>input[type=week]:focus,
+.form .field>input[type=password]:focus,
+.form .field>input[type=date]:focus,
+.form .field>input[type=month]:focus,
+.form .field>input[type=email]:focus,
+.form .field>input[type=search]:focus,
+.form .field>input[type=time]:focus,
+.form .field>input[type=url]:focus,
+.form .field>input[type=tel]:focus {
     border-color: var(--color1);
+}
+
+.fieldgroup {
+    border: var(--border);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.form .field>input[type=radio],
+.form .field>input[type=checkbox] {
+    
+}
+
+.form .field>input[type=radio]:after,
+.form .field>input[type=checkbox]:after {
+    content: " ";
+}
+
+.form .field>input[type=radio]+label,
+.form .field>input[type=checkbox]+label {
+    display: inline-block;
+}
+
+.form .field>input[type=radio]+label:after,
+.form .field>input[type=checkbox]+label:after {
+    content: "";
 }
 
 .buttonbar {
@@ -222,13 +269,15 @@ hr {
     border-color: var(--backgroud);
 }
 
-.menu {
+.menu,
+.sidebar {
     margin: 0;
     padding: 0;
     background-color: var(--backgroud);
 }
 
-.menu .item {
+.menu .item,
+.sidebar .item {
     display: inline-block;
     color: var(--color2);
     background-color: var(--backgroud);
@@ -238,6 +287,34 @@ hr {
     text-align: center;
 }
 
-.menu .item:hover {
+.menu .item:hover,
+.sidebar .item:hover {
     background-color: var(--color1);
+}
+
+.sidebar {
+    display: inline-block;
+}
+
+.sidebar .item {
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
 }
