@@ -1,0 +1,243 @@
+:root {
+    --color1: #e63946;
+    --color2: #f1faee;
+    --color3: #a8dadc;
+    --color4: #457b9d;
+    --color5: #1d3557;
+    
+    --size-smaller: 0.5em;
+    --size-small: 0.8em;
+    --size-normal: 1em;
+    --size-big: 1.3em;
+    --size-bigger: 1.5em;
+    --size-biggest: 2em;
+    
+    --border: thin solid var(--color4);
+    
+    --padding: 0.2em 0.2em 0.2em 0.2em;
+    --margin: 0.3em 0.3em 0.3em 0.3em;
+    
+    --backgroud: var(--color4);
+    
+    --large: 5em;
+}
+
+body {
+    color: var(--color5);
+    font-family: sans-serif;
+    font-size: var(--size-normal);
+    padding: var(--padding);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-bottom: var(--border);
+    color: var(--color4);
+}
+
+h1 {
+    font-size: var(--size-biggest);
+}
+h2 {
+    font-size: var(--size-bigger);
+}
+h3 {
+    font-size: var(--size-big);
+}
+h4 {
+    font-size: var(--size-normal);
+}
+h5 {
+    font-size: var(--size-small);
+}
+h6 {
+    font-size: var(--size-smaller);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color4);
+    font-style: oblique;
+}
+
+p {
+    
+}
+
+blockquote {
+    border-left: var(--border);
+    margin: 2em 0.5em 2em 4em;
+    padding-left: 0.5em;
+    font-size: var(--size-small);
+    font-style: italic;
+}
+
+q {
+    font-style: italic;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+dl dt:after {
+    content: ":";
+}
+dl dd {
+    font-style: italic;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "* ";
+    color: var(--color1);
+    font-weight: bolder;
+}
+
+hr {
+    border: var(--border);
+    border-color: var(--color1);
+    line-height: var(--size-smallerl);
+}
+
+.table {
+    border: var(--border);
+    border-collapse: collapse;
+}
+
+.table caption {
+    font-weight: bolder;
+}
+
+.table thead {
+    background-color: var(--backgroud);
+    color: var(--color2);
+}
+
+.table thead td,
+.table thead th {
+    border: var(--border);
+    padding: var(--padding);
+}
+
+.table tbody td {
+    border: var(--border);
+}
+
+.table tfoot {
+    
+}
+
+.table tfoot th,
+.table tfoot td {
+    border: var(--border);
+    padding: var(--padding);
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+
+.form {
+    margin: var(--margin);
+    border: var(--border);
+}
+
+.title {
+    background-color: var(--backgroud);
+    color: var(--color2);
+    font-weight: bold;
+    padding: var(--padding);
+    margin: 0;
+}
+
+.form .fields {
+    padding: var(--padding);
+}
+.form field {
+    margin: var(--margin);
+}
+
+.form .field .label {
+    display: block;
+    font-size: var(--size-normal);
+}
+
+.form .field .label:after {
+    content: ":";
+}
+
+.form .field .text,
+.form .field .password,
+.form .field .number {
+    border: var(--border);
+}
+
+.form .field .text:focus,
+.form .field .password:focus,
+.form .field .number:focus {
+    border-color: var(--color1);
+}
+
+.buttonbar {
+    border: var(--border);
+    padding: var(--padding);
+    margin: 0;
+}
+
+.button {
+    border: var(--border);
+    padding: var(--padding);
+    min-width: var(--large);
+}
+
+.button.primary {
+    background-color: var(--backgroud);
+    color: var(--color2);
+}
+
+.button.alternative {
+    border-color: var(--color1);
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.button:hover {
+    border-color: var(--color1);
+}
+
+.button.alternative:hover {
+    border-color: var(--backgroud);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    background-color: var(--backgroud);
+}
+
+.menu .item {
+    display: inline-block;
+    color: var(--color2);
+    background-color: var(--backgroud);
+    border: none;
+    line-height: var(--size-biggest);
+    min-width: var(--large);
+    text-align: center;
+}
+
+.menu .item:hover {
+    background-color: var(--color1);
+}
